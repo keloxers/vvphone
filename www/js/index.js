@@ -33,6 +33,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        FastClick.attach(document.body);
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
@@ -47,3 +48,17 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function renderHomeView() {
+    var html =
+        "<h1>Directory</h1>" +
+        "<input class='search-key' type='search' placeholder='Enter name'/>" +
+        "<ul class='employee-list'></ul>";
+    $('body').html(html);
+    $('.search-key').on('keyup', findByName);
+}
+
+    var adapter = new MemoryAdapter();
+        adapter.initialize().done(function () {
+        renderHomeView();
+    });
