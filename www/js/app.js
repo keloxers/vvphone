@@ -5,8 +5,8 @@ angular.module('todo', ['ionic'])
 $http.get('http://www.virasorovirtual.com.ar/api/index.php').
         success(function(data) {
             $scope.greetings = data;
-            $texto = JSON.stringify($scope.greetings[1].title);
-            alert($texto);
+            // $texto = JSON.stringify($scope.greetings[1].title);
+            // alert($texto);
         });
 
 

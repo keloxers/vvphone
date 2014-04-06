@@ -22,22 +22,46 @@
     <!-- Center content -->
 <!-- Center content -->
 <ion-side-menu-content>
-  <ion-header-bar class="bar-dark">
-    <h1 class="title">Noticias de Virasoro</h1>
+  <ion-header-bar class="bar-energized">
+    <h1 class="title">VirasoroVirtual.com.ar</h1>
   </ion-header-bar>
   <ion-content>
     <!-- our list and list items -->
 
     <ul>
         <li ng-repeat="greeting in greetings">
-          <h6>
-            {{greeting.fecha}}
-          </h6>
 
-          <h4>
-            {{greeting.title}}
-          </h4>
-            {{greeting.copete}}
+<div class="list card">
+
+  
+
+  <div class="item item-body">
+    <!-- <img class="full-image" src="delorean.jpg"> -->
+    <p>{{greeting.fecha}}</p>
+    <h2>{{greeting.title}}</h2>
+    <p>{{greeting.copete}}</p>
+    <p>
+      <a href="#" class="subdued">{{greeting.visitas}} Visitas</a>
+    </p>
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-link"></i>
+      Ir
+    </a>    
+    <a class="tab-item" href="#">
+      <i class="icon ion-share"></i>
+      Share
+    </a>
+  </div>
+
+</div>
+
+
+
+
+
         </li>
     </ul>
 
@@ -50,20 +74,34 @@
 
     <!-- Left menu -->
     <ion-side-menu side="left">
-      <ion-header-bar class="bar-dark">
-        <h1 class="title">Acerca</h1>
+      <ion-header-bar class="bar-energized">
+        <h1 class="title">Opciones</h1>
       </ion-header-bar>
       <ion-content>
-      <b>CodexControl.com</b><br><br>
-      Desarrollo de aplicaciones moviles con acceso a bases de datos, su imaginación es el limite.<br>
-      <br>
-      Mail: info@codexcontrol.com<br>
-      movil: (0054) 03756 15417551<br>
-      Lavalle y Manuel Ocampo<br>
-      1er Piso Oficina 1<br>
-      Gdor. Virasoro<br>
-      Corrientes<br>
-      Argentina<br>
+
+        <div class="list">
+
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-bag"></i>
+            Clasificados
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-camera"></i>
+            Envia tu fotonoticia
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-wrench"></i>
+            Desarrollo movil
+          </a>
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-person-stalker"></i>
+            Quienes Somos
+          </a>
+
+        </div>
+
+
+
       </ion-content>      
     </ion-side-menu>
   </ion-side-menus>
