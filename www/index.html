@@ -39,7 +39,7 @@
     
     <p>{{greeting.fecha}}</p>
     <h2>{{greeting.title}}</h2>
-    <img class="full-image" src="http://www.virasorovirtual.com.ar/imagenes/galeria/m/MpnMQzdNGexBzdjj.jpg">
+    <img class="full-image" src="http://www.virasorovirtual.com.ar/imagenes/galeria/m/{{greeting.file_name}}.jpg">
     <p>{{greeting.copete}}</p>
     <p>
       <a href="#" class="subdued">{{greeting.visitas}} Visitas</a>
@@ -49,12 +49,9 @@
   <div class="item tabs tabs-secondary tabs-icon-left">
     <a class="tab-item" href="#">
       <i class="icon ion-link"></i>
-      Ir
-    </a>    
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Share
+      Visitar página
     </a>
+    <button onclick="window.plugins.socialsharing.share('My message')">share!</button>
   </div>
 
 </div>
