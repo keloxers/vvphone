@@ -16,10 +16,4 @@
     <feature name="StatusBar">
       <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
-    <!-- for Android -->
-    <feature name="SocialSharing">
-      <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
-    </feature>    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    
 </widget>
