@@ -10,14 +10,10 @@
                 "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>": 1,
                 "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>": 1,
                 "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />": 1,
-                "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />": 1,
-                "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /></feature>": 1
+                "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />": 1
             }
         },
         "framework": {
-            "Social.framework": {
-                "false": 1
-            },
             "MessageUI.framework": {
                 "false": 1
             }
@@ -31,9 +27,6 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
-        },
-        "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },
