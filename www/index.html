@@ -19,9 +19,6 @@
     
   </head>
 <body ng-app="todo" ng-controller="TodoCtrl">
-<ion-refresher pulling-text="Pull to refresh..."
-    on-refresh="doRefresh()">
-  </ion-refresher>
 
   <ion-side-menus>
 
@@ -30,48 +27,39 @@
 <ion-side-menu-content>
 
   <ion-header-bar class="bar-energized">
-    <button class="button button-icon icon ion-navicon" onclick="doRefresh();"></button>
+    <button class="button button-icon icon ion-navicon"></button>
     <h1 class="title">VirasoroVirtual.com.ar</h1>
 
   </ion-header-bar>
   <ion-content>
     <!-- our list and list items -->
 
+  <ion-refresher pulling-text="<h4>Soltar para refrescar</h4>" on-refresh="doRefresh()">
+  </ion-refresher>
+
     <ul>
         <li ng-repeat="greeting in greetings">
-
-<div class="list card">
-
-  
-
-  <div class="item item-body">
-    
-    <p>{{greeting.fecha}}</p>
-    <h2>{{greeting.title}}</h2>
-    <img class="full-image" src="http://www.virasorovirtual.com.ar/imagenes/galeria/m/{{greeting.file_name}}.jpg">
-    <p>{{greeting.copete}}</p>
-    <p>
-      <a href="#" class="subdued">{{greeting.visitas}} Visitas</a>
-    </p>
-  </div>
-
-<div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#">
-      <i class="icon ion-thumbsup"></i>
-      Ir
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Compartir
-    </a>
-  </div>
-
-</div>
-
-
-
-
-
+            <div class="list card">
+              <div class="item item-body">
+                <p>{{greeting.fecha}}</p>
+                <h2>{{greeting.title}}</h2>
+                <img class="full-image" src="http://www.virasorovirtual.com.ar/imagenes/galeria/m/{{greeting.file_name}}.jpg">
+                <p>{{greeting.copete}}</p>
+                <p>
+                  <a href="#" class="subdued">{{greeting.visitas}} Visitas</a>
+                </p>
+              </div>
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                  <i class="icon ion-link"></i>
+                  Ir
+                </a>
+                <a class="tab-item" href="#">
+                  <i class="icon ion-share"></i>
+                  Compartir
+                </a>
+              </div>
+            </div>
         </li>
     </ul>
 
