@@ -19,13 +19,20 @@
     
   </head>
 <body ng-app="todo" ng-controller="TodoCtrl">
+<ion-refresher pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+
   <ion-side-menus>
 
     <!-- Center content -->
 <!-- Center content -->
 <ion-side-menu-content>
+
   <ion-header-bar class="bar-energized">
+    <button class="button button-icon icon ion-navicon" onclick="doRefresh();"></button>
     <h1 class="title">VirasoroVirtual.com.ar</h1>
+
   </ion-header-bar>
   <ion-content>
     <!-- our list and list items -->
@@ -48,15 +55,15 @@
     </p>
   </div>
 
-  <div class="item tabs tabs-secondary tabs-icon-left">
+<div class="item tabs tabs-secondary tabs-icon-left">
     <a class="tab-item" href="#">
-      <i class="icon ion-link"></i>
-      Visitar página
-    </a>    
+      <i class="icon ion-thumbsup"></i>
+      Ir
+    </a>
     <a class="tab-item" href="#">
-      <i class="icon ion-link"></i>
-      Compartir !
-    </a>    
+      <i class="icon ion-share"></i>
+      Compartir
+    </a>
   </div>
 
 </div>
