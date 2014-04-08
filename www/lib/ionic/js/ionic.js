@@ -3539,8 +3539,7 @@ ionic.views.Scroll = ionic.views.View.inherit({
       // Don't react if initial down happens on a form element
       return e.target.tagName.match(IS_INPUT_LIKE_REGEX) ||
              e.target.isContentEditable ||
-             e.target.tagName.match(IS_EMBEDDED_OBJECT_REGEX) ||
-             e.target.dataset.preventScroll;
+             e.target.tagName.match(IS_EMBEDDED_OBJECT_REGEX);
     }
 
 
