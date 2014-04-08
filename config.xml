@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.codexcontrol.virasorovirtual" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>VirasoroVirtual</name>
+<widget id="com.ionicframework.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloCordova</name>
     <description>
-        Noticias de Gdor. Virasoro Ctes.
+        An Ionic Framework and Cordova project.
     </description>
-    <author email="info@codexcontrol.com.ar" href="http://codexcontrol.com.ar/">
-      CodexControl
+    <author email="hi@ionicframework" href="http://ionicframework.com/">
+      Ionic Framework Team
     </author>
     <content src="index.html" />
     <access origin="*" />

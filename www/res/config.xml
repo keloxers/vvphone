@@ -1,5 +1,0 @@
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="promo_message">
-        Use ”<xliff:g id="promotion_code">ABCDEFG</xliff:g>”.
-    </string>
-</resources>

@@ -1,5 +1,35 @@
-<ion-view title="Dashboard">
+<ion-view title="VirasoroVirtual">
   <ion-content class="has-header padding">
-    <h1>Dash</h1>
+
+        <!-- our list and list items -->
+
+
+        <ion-refresher pulling-text="Actualizar" on-refresh="doRefresh()"></ion-refresher>
+
+        <ul>
+          <li ng-repeat="noticia in noticias">
+            <div class="list card">
+              <div class="item item-body">
+                <p>{{noticia.fecha}}</p>
+                <h2>{{noticia.title}}</h2>
+                <img class="full-image" src="http://www.virasorovirtual.com.ar/imagenes/galeria/m/{{noticia.file_name}}.jpg">
+                <p>{{noticia.copete}}</p>
+                <p>
+                  <a href="#" class="subdued">{{noticia.visitas}} Visitas</a>
+                </p>
+              </div>
+<!--               <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#/tab/friend/{{noticia.id_articulo}}"> <i class="icon ion-link"></i>
+
+                  Ir
+                </a>
+                <a class="tab-item" href="#"> <i class="icon ion-share"></i>
+                  Compartir
+                </a>
+              </div>
+ -->            </div>
+          </li>
+        </ul>
+
   </ion-content>
 </ion-view>
