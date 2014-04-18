@@ -14,7 +14,10 @@ angular.module('starter.controllers', [])
       success(function(data) {
         $scope.noticias = data;
         $scope.$broadcast('scroll.refreshComplete');
-      });
+      }).
+      error(function(){
+        alert("error");
+    });
   };
 })
 
@@ -22,7 +25,7 @@ angular.module('starter.controllers', [])
 
 
 .controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+  window.open(encodeURI('http://k-rudy.github.io/phonegap-twitter-timeline?457138837286699008'), '_self', 'location=no'); 
 })
 
 
