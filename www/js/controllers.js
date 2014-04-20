@@ -24,9 +24,24 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('FriendsCtrl', function($scope, Friends) {
+.controller('FriendsCtrl', function($scope, $http) {
 
-  window.open(encodeURI('http://k-rudy.github.io/phonegap-twitter-timeline?457138837286699008'), '_blank', 'location=yes'); 
+  $http.get('http://www.virasorovirtual.com.ar/api/twittersvv.php').
+          success(function(data) {
+              $scope.twitters = data;
+          });
+
+
+
+
+  $scope.doRefresh = function() {
+    $http.get('http://www.virasorovirtual.com.ar/api/twittersvv.php').
+      success(function(data) {
+        $scope.twitters = data;
+        $scope.$broadcast('scroll.refreshComplete');
+      })
+  };
+
 })
 
 

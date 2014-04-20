@@ -1,5 +1,42 @@
 <ion-view title="Twitters">
   <ion-content class="has-header padding">
 
+        <!-- our list and list items -->
+
+
+        <ion-refresher pulling-text="Actualizar" on-refresh="doRefresh()"></ion-refresher>
+
+        <ul>
+          <li ng-repeat="twitter in twitters">
+
+
+				<div class="list card">
+
+				  <div class="item item-avatar">
+				    <img src="{{twitter.url_imagen}}">
+				    <h5>{{twitter.fecha}}</h5>
+				    <p>{{twitter.screen_name}}</p>
+				  </div>
+
+				  <div class="item item-body">
+
+				    <h3>{{twitter.tweet}}</h3>
+				  </div>
+
+
+				</div>
+
+
+
+
+
+
+
+          </li>
+        </ul>
+
+
+
+    <br><br><br>
   </ion-content>
 </ion-view>
