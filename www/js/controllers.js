@@ -25,8 +25,8 @@ angular.module('starter.controllers', [])
 
 
 .controller('FriendsCtrl', function($scope, Friends) {
-  
-  window.open(encodeURI('http://k-rudy.github.io/phonegap-twitter-timeline?457138837286699008'), '_blank', 'location=no'); 
+
+  window.open(encodeURI('http://k-rudy.github.io/phonegap-twitter-timeline?457138837286699008'), '_blank', 'location=yes'); 
 })
 
 
