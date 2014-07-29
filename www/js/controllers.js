@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $http) {
-	$http.get('http://www.virasorovirtual.com.ar/api/index.php?api=noticias').
+	$http.get('http://www.virasorovirtual.com/api/index.php?api=noticias').
           success(function(data) {
               $scope.noticias = data;
           });
@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
 
 
   $scope.doRefresh = function() {
-    $http.get('http://www.virasorovirtual.com.ar/api/index.php?api=noticias').
+    $http.get('http://www.virasorovirtual.com/api/index.php?api=noticias').
       success(function(data) {
         $scope.noticias = data;
         $scope.$broadcast('scroll.refreshComplete');
@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
 
 .controller('FriendsCtrl', function($scope, $http) {
 
-  $http.get('http://www.virasorovirtual.com.ar/api/twittersvv.php').
+  $http.get('http://www.virasorovirtual.com/api/twittersvv.php').
           success(function(data) {
               $scope.twitters = data;
           });
@@ -35,7 +35,7 @@ angular.module('starter.controllers', [])
 
 
   $scope.doRefresh = function() {
-    $http.get('http://www.virasorovirtual.com.ar/api/twittersvv.php').
+    $http.get('http://www.virasorovirtual.com/api/twittersvv.php').
       success(function(data) {
         $scope.twitters = data;
         $scope.$broadcast('scroll.refreshComplete');
@@ -55,14 +55,14 @@ angular.module('starter.controllers', [])
 
 
 .controller('AccountCtrl', function($scope, $http) {
-	$http.get('http://www.virasorovirtual.com.ar/api/index.php?api=clasificados').
+	$http.get('http://www.virasorovirtual.com/api/index.php?api=clasificados').
 			success(function(data) {
 			$scope.clasificados = data;
 	});
 
 
 	$scope.doRefresh = function() {
-	    $http.get('http://www.virasorovirtual.com.ar/api/index.php?api=clasificados').
+	    $http.get('http://www.virasorovirtual.com/api/index.php?api=clasificados').
 	      success(function(data) {
 	        $scope.clasificados = data;
 	        $scope.$broadcast('scroll.refreshComplete');
