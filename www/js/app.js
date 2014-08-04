@@ -43,6 +43,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('tab.radio', {
+      url: '/radio',
+      views: {
+        'tab-radio': {
+          templateUrl: 'templates/tab-radio.html',
+          controller: 'RadioCtrl'
+        }
+      }
+    })
+
+
     .state('tab.friends', {
       url: '/friends',
       views: {
@@ -76,4 +87,3 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
-

@@ -24,6 +24,34 @@ angular.module('starter.controllers', [])
 
 
 
+.controller('RadioCtrl', function($scope) {
+
+
+
+	  // Open our new task modal
+	  $scope.audioplay = function() {
+				try {
+						var myaudio = new Audio('http://208.68.36.162:8000/live');
+						myaudio.id = 'playerMyAdio';
+						myaudio.play();
+					} catch (e) {
+						alert('no audio support!');
+					}
+	  };
+
+
+		// Open our new task modal
+		$scope.audiostop = function() {
+
+		};
+
+
+
+})
+
+
+
+
 .controller('FriendsCtrl', function($scope, $http) {
 
   $http.get('http://www.virasorovirtual.com/api/twittersvv.php').
