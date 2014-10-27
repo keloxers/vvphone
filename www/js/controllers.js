@@ -6,9 +6,6 @@ angular.module('starter.controllers', [])
               $scope.noticias = data;
           });
 
-
-
-
   $scope.doRefresh = function() {
     $http.get('http://www.virasorovirtual.com/api/noticias').
       success(function(data) {
@@ -16,17 +13,12 @@ angular.module('starter.controllers', [])
         $scope.$broadcast('scroll.refreshComplete');
       }).
       error(function(){
-        alert("error");
+        alert("error en la conexion");
     });
   };
 })
 
-
-
-
 .controller('RadioCtrl', function($scope) {
-
-
 
 	  // Open our new task modal
 	  $scope.audioplay = function() {
