@@ -1,0 +1,32 @@
+<ion-view title="VirasoroVirtual">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="Actualizar" on-refresh="doRefresh()"></ion-refresher>
+
+    <ul>
+      <li ng-repeat="noticia in noticias">
+        <div class="list card">
+          <div class="item item-body">
+            <p>{{noticia.fecha}}</p>
+            <a href="#/app/noticias/{{noticia.id_articulo}}">
+              <h2>{{noticia.title}}</h2>
+            </a><br>
+            <img class="full-image" src="http://www.virasorovirtual.com/uploads/crop/{{noticia.file_name}}">
+            <p>{{noticia.copete}}</p>
+            <p>
+              <a href="#" class="subdued">{{noticia.visitas}} Visitas</a>
+            </p>
+          </div>
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#/app/noticias/{{noticia.id_articulo}}"> <i class="icon ion-link"></i>
+              Leer noticia
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </ion-content>
+</ion-view>
