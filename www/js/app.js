@@ -97,6 +97,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.farmaciasdeturno', {
+    url: "/farmaciasdeturno",
+    views: {
+      'menuContent' :{
+        templateUrl: "templates/farmaciasdeturno.html",
+        controller: 'FarmaciasdeturnoCtrl'
+      }
+    }
+  })
+
+
   .state('app.enviarclasificado', {
     url: "/enviarclasificado",
     views: {

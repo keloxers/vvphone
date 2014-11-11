@@ -82,6 +82,27 @@ angular.module('starter.controllers', [])
 })
 
 
+.controller('FarmaciasdeturnoCtrl', function($scope, $http) {
+  $http.get('http://www.virasorovirtual.com/api/farmaciadeturno').
+          success(function(data) {
+              $scope.turnos = data;
+          });
+
+  $scope.doRefresh = function() {
+    $http.get('http://www.virasorovirtual.com/api/farmaciadeturno').
+      success(function(data) {
+        $scope.turnos = data;
+        $scope.$broadcast('scroll.refreshComplete');
+      }).
+      error(function(){
+        alert("error en la conexion");
+    });
+  };
+})
+
+
+
+
 .controller('EnviarclasificadoCtrl', function($scope, $http) {
 
   // Perform the login action when the user submits the login form
@@ -99,13 +120,7 @@ angular.module('starter.controllers', [])
                       alert("err"+err);
                       console.log("err"+err);
                   });
-
-
-
   };
-
-
-
 })
 
 
@@ -125,5 +140,6 @@ angular.module('starter.controllers', [])
         alert("error en la conexion");
     });
   };
-})
-;
+
+
+});

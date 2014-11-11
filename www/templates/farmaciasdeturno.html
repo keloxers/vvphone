@@ -1,0 +1,22 @@
+<ion-view title="Farmacias de Turno">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+
+      <ion-refresher pulling-text="Actualizar" on-refresh="doRefresh()"></ion-refresher>
+      <ul>
+        <li ng-repeat="turno in turnos">
+          <div class="list card">
+            <div class="item item-body">
+              <p>Fecha: {{turno.fecha}}</p>
+              <h2>Farmacia de Turno:</h2>
+              <h1>{{turno.turno}}</h1>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+  </ion-content>
+</ion-view>
