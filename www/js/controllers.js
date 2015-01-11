@@ -108,19 +108,30 @@ angular.module('starter.controllers', [])
   // Perform the login action when the user submits the login form
   $scope.doenviaclasi = function() {
 
-      $http.post('http://www.virasorovirtual.com/api/enviarclasificado',$scope.clasiData,{
-                      headers:{
-                          'Content-Type':'undefined'
-                      }
-                  }).success(function(response) {
-                      alert(response);
-                      $scope.ReadData = response;
-                      console.log(response);
-                  }).error(function(err) {
-                      alert("err"+err);
-                      console.log("err"+err);
-                  });
+      // $http.post('https://www.virasorovirtual.com/api/enviarclasificado', $scope.clasiData);
+
+
+
+  //     $http.post('http://www.virasorovirtual.com/api/enviarclasificado',$scope.clasiData,{
+  //                     headers:{
+  //                         'Content-Type':'undefined'
+  //                     }
+  //                 }).success(function(response) {
+  //                     alert(response);
+  //                     $scope.ReadData = response;
+  //                     console.log(response);
+  //                 }).error(function(err) {
+  //                     alert("err"+err);
+  //                     console.log("err"+err);
+  //                 });
+  //
+
+    alert('enviando');
+
   };
+
+
+
 })
 
 
